@@ -10,7 +10,6 @@ Ryde is a modern, object-oriented C# console application that simulates a ride-s
 - **Payment System**: Passengers pay for rides using a wallet system; drivers earn from completed rides.
 - **Rating & Feedback**: Passengers can rate drivers after each ride.
 - **Reporting**: System generates reports on rides, earnings, and user activity.
-- **Persistent Storage**: All rides are stored in a JSON file for durability and future access.
 
 ## How It Works
 

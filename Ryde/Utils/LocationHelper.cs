@@ -131,5 +131,21 @@ namespace Utils
 
             return $"{arrivalTime:HH:mm} (in {travelTime:F0} minutes)";
         }
+
+        /// <summary>
+        /// Calculates the distance (in km) between two supported locations.
+        /// For demo purposes, returns a random value or a fixed mapping.
+        /// </summary>
+        public static double CalculateDistance(string fromLocation, string toLocation)
+        {
+            // Simple demo: if locations are the same, distance is 1km
+            if (string.Equals(fromLocation, toLocation, StringComparison.OrdinalIgnoreCase))
+                return 1.0;
+
+            // Otherwise, assign a pseudo-random but deterministic distance based on string hash
+            int hash = Math.Abs((fromLocation + toLocation).GetHashCode());
+            // Distance between 5km and 30km
+            return 5.0 + (hash % 26);
+        }
     }
 }

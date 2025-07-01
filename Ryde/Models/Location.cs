@@ -18,14 +18,14 @@ namespace Ryde
             Longitude = longitude;
         }
 
-        // Calculate distance between two locations (simplified)
+        // Calculate distance between two locations
         public double DistanceTo(Location other)
         {
-            // Simplified distance calculation (in real apps, use proper geolocation formulas)
+            // Distance calculation
             double latDiff = Math.Abs(this.Latitude - other.Latitude);
             double lonDiff = Math.Abs(this.Longitude - other.Longitude);
 
-            return Math.Sqrt(latDiff * latDiff + lonDiff * lonDiff) * 111; // Rough km conversion
+            return Math.Sqrt(latDiff * latDiff + lonDiff * lonDiff) * 111;
         }
     }
 }

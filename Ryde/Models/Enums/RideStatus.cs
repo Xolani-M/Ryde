@@ -10,7 +10,9 @@ namespace Ryde
     {
         Requested,
         Accepted,
-        InProgress,
+        EnRouteToPickup, // Driver is heading to pickup
+        ArrivedAtPickup, // Driver has arrived at pickup
+        InProgress,      // Passenger picked up, ride in progress
         Completed,
         Cancelled
     }

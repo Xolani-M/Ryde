@@ -9,7 +9,7 @@ namespace Utils
 {
     public static class RatingStorageHelper
     {
-        private static readonly string DataDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
+        private static readonly string DataDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Data"));
         private static readonly string RatingsFile = Path.Combine(DataDirectory, "ratings.json");
 
         static RatingStorageHelper()

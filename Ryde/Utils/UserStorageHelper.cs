@@ -9,7 +9,7 @@ namespace Utils
 {
     public static class UserStorageHelper
     {
-        private static readonly string DataDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
+        private static readonly string DataDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Data"));
         private static readonly string UsersFile = Path.Combine(DataDirectory, "users.json");
 
         static UserStorageHelper()

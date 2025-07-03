@@ -9,7 +9,7 @@ namespace Utils
 {
     public static class RideStorageHelper
     {
-        private static readonly string DataDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
+        private static readonly string DataDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Data"));
         private static readonly string RidesFile = Path.Combine(DataDirectory, "rides.json");
 
         static RideStorageHelper()
